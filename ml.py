@@ -18,4 +18,6 @@ def classify(file_path):
     # infer on a local image
     result = CLIENT.infer(file_path, model_id="waste-classification-wrw6h/1")
 
+    if (len(result["predicted_classes"]) == 0):
+        return ""
     return result["predicted_classes"][0]
