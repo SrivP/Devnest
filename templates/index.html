@@ -15,11 +15,6 @@
         <div class="row">
             <div class="col-6 mx-auto mt-5 text-center">
                 <h1>Waste Classification</h1>
-                {% if not file_url %}
-                    <div class="spinner-border mt-5 mb-5" role="status">
-                        <span class="visually-hidden">Loading...</span>
-                    </div>
-                {% endif %}
                 <!-- Display Image -->
                 {% if file_url %}
                     <div class="mt-5 mb-5">
@@ -28,7 +23,6 @@
                 {% endif %}
                 <form method="POST" enctype="multipart/form-data">
                     {{form.hidden_tag()}}
-
                     {% for error in form.photo.errors %}
                         <span style="color:red;">{{ error }}</span>
                     {% endfor %}
@@ -41,6 +35,11 @@
                             
                         </div>
                     </div>
+                    <script>
+                        $('#submit').on('click', function (e) {
+                            document.getElementById("loadingicon").style.visibility = "visible"
+                        })
+                    </script>
                 </form>
             </div>
         </div>
