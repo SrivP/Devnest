@@ -1,4 +1,7 @@
 
+from os import getenv
+from dotenv import load_dotenv
+
 from flask import (Flask, flash, redirect, render_template, request,
                    send_from_directory, url_for)
 from flask_uploads import IMAGES, UploadSet, configure_uploads
@@ -12,10 +15,11 @@ from ml import classify
 UPLOAD_FOLDER = './uploads/'
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
 
+load_dotenv()
 
 app = Flask(__name__)
-app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-app.config['SECRET_KEY'] = "gd6OrhkbrImuCVmqhmRa"
+app.config['UPLOADED_PHOTOS_DEST'] = UPLOAD_FOLDER
+app.config['SECRET_KEY'] = getenv("API_KEY")
 
 # Uploads
 photos = UploadSet('photos', IMAGES)
@@ -41,10 +45,10 @@ def upload_image():
     form = UploadForm()
     if form.validate_on_submit():
         file_name = photos.save(form.photo.data)
-        file_url = url_for('get_file', filename= file_name)
+        result = classify("./uploads/" + file_name)
     else:
-        file_url = None
-    return render_template('index.html', form=form, file_url=file_url)
+        result = None
+    return render_template('index.html', form=form, result=result)
 
 
 # Path for all the static files (compiled JS/CSS, etc.)
