@@ -1,8 +1,8 @@
 # import the inference-sdk
 
 from os import getenv
-from dotenv import load_dotenv
 
+from dotenv import load_dotenv
 from inference_sdk import InferenceHTTPClient
 
 # initialize the client
@@ -18,4 +18,4 @@ def classify(file_path):
     # infer on a local image
     result = CLIENT.infer(file_path, model_id="waste-classification-wrw6h/1")
 
-    return result["predicted_classes"][0] 
+    return result["predicted_classes"][0]

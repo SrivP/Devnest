@@ -1,0 +1,15 @@
+descriptions = {
+    "battery": "Take batteries to a Community Environment Day or a Drop-Off Depot for hazardous waste. Never place them in the garbage, recycling, or green bin.",
+    "biological": " Place items like food scraps, tissues, and other organic materials in the green bin for composting.",
+    "brown-glass": "Rinse and place brown glass bottles and jars in the blue bin for recycling.",
+    "cardboard": "Flatten cardboard boxes and place them in the blue bin for recycling. Ensure that any food residue is removed.",
+    "clothes": "If in good condition, donate clothes to a local charity or textile recycling program. Do not place them in the blue bin.",
+    "green-glass": "Rinse and place green glass bottles and jars in the blue bin for recycling.",
+    "metal": "Place metal cans, tins, and small scrap metal items in the blue bin. Large metal items should be taken to a Drop-Off Depot.",
+    "paper": "Place newspapers, magazines, and other clean paper products in the blue bin. Shredded paper should be placed in a clear plastic bag.",
+    "plastic": "Place clean plastic containers, bottles, and packaging in the blue bin. Check for the recycling symbol and number to ensure it is accepted.",
+    "shoes": "If in good condition, donate shoes to a local charity or textile recycling program. Do not place them in the blue bin.",
+    "trash": "Items that cannot be recycled or composted should be placed in the garbage bin. Check if items are hazardous and require special disposal.",
+    "white-glass": "Rinse and place white or clear glass bottles and jars in the blue bin for recycling.",
+    "": "We are unsure of what item this is.",
+}
