@@ -15,7 +15,7 @@ ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-app.config['SECRET_KEY'] = "gd6OrhkbrImuCVmqhmRa"
+app.config['SECRET_KEY'] = "no."
 
 # Uploads
 photos = UploadSet('photos', IMAGES)
@@ -53,5 +53,5 @@ def home(path):
     return send_from_directory('templates', path)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=10000)
 

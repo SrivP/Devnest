@@ -7,7 +7,7 @@ from inference_sdk import InferenceHTTPClient
 def classify(file_path):
     CLIENT = InferenceHTTPClient(
         api_url="https://detect.roboflow.com",
-        api_key="gd6OrhkbrImuCVmqhmRa"
+        api_key="no."
     )
 
     # infer on a local image
