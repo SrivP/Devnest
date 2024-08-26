@@ -14,8 +14,12 @@
             <span style="color:red;">{{ error }}</span>
         {% endfor %}
         
-        </input name="text">
-        </input type="submit">
+        {{form.photo}}
+        {{form.submit}}
     </form>
+
+    {% if result %}
+        <p>{{result}}</p>
+    {% endif %}
 </body>
 </html>
