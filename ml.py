@@ -1,16 +1,13 @@
 # import the inference-sdk
-from inference_sdk import InferenceHTTPClient
-from dotenv import load_dotenv
-import os
 
-load_dotenv()
+from inference_sdk import InferenceHTTPClient
 
 # initialize the client
 
 def classify(file_path):
     CLIENT = InferenceHTTPClient(
         api_url="https://detect.roboflow.com",
-        api_key=os.getenv("API_KEY")
+        api_key="gd6OrhkbrImuCVmqhmRa"
     )
 
     # infer on a local image
